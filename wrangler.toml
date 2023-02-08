@@ -1,8 +1,5 @@
 name = "jcyl-allergies-api"
-type = "webpack"
+main = "index.js"
 
-account_id = ""
 workers_dev = true
-route = ""
-zone_id = ""
 compatibility_date = "2022-05-12"
