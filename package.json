@@ -1,19 +1,22 @@
 {
-  "private": false,
-  "name": "jcyl-allergies-api",
-  "version": "1.0.0",
-  "description": "Easy API to consume JCyL open data regarding allergies",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write '**/*.{js,css,json,md}'"
-  },
-  "author": "ricveal",
-  "license": "MIT",
-  "devDependencies": {
-    "prettier": "^1.18.2"
-  },
-  "dependencies": {
-    "itty-router": "^2.6.1"
-  }
+	"name": "jcyl-allergies-api",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite build && wrangler pages dev",
+		"deploy": "npm run build && wrangler pages deploy",
+    "generate-types": "wrangler types",
+    "type-check": "generate-types && tsc"
+	},
+	"dependencies": {
+		"@hono/swagger-ui": "^0.5.1",
+		"hono": "^4.7.9"
+	},
+	"devDependencies": {
+		"@hono/vite-build": "^1.2.0",
+		"@hono/vite-dev-server": "^0.18.2",
+		"vite": "^6.1.1",
+		"wrangler": "^4.14.4"
+	}
 }

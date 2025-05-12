@@ -1,5 +1,0 @@
-name = "jcyl-allergies-api"
-main = "index.js"
-
-workers_dev = true
-compatibility_date = "2022-05-12"
